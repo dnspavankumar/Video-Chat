@@ -6,16 +6,16 @@ import MobileNav from './MobileNav';
 
 const Navbar = () => {
   return (
-    <nav className="flex-between fixed z-50 w-full bg-gradient-to-r from-gray-900/95 via-black/95 to-gray-900/95 backdrop-blur-xl border-b border-red-500/20 shadow-2xl shadow-red-500/10">
+    <nav className="flex-between fixed z-50 w-full bg-gradient-to-r from-gray-900/95 via-gray-900/95 to-gray-900/95 backdrop-blur-xl border-b border-red-500/20 shadow-2xl shadow-red-500/10">
       {/* Desktop: Show app name after sidebar */}
       <div className="hidden lg:flex items-center gap-3 w-[280px] px-8 py-5">
-        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-500 to-purple-500 flex-center shadow-lg">
+        <div className="size-10 rounded-xl bg-gradient-to-br from-red-500 to-purple-500 flex-center shadow-lg">
           <Image
             src="/icons/Video.svg"
             width={22}
             height={16}
             alt="Video camera icon"
-            className="filter brightness-0 invert"
+            className="brightness-0 invert"
           />
         </div>
         <h1 className="text-3xl font-extrabold bg-gradient-to-r from-red-400 to-purple-400 bg-clip-text text-transparent">
@@ -25,13 +25,13 @@ const Navbar = () => {
 
       {/* Mobile: Show logo */}
       <Link href="/" className="flex items-center gap-3 lg:hidden px-8 py-5">
-        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-500 to-purple-500 flex-center shadow-lg">
+        <div className="size-10 rounded-xl bg-gradient-to-br from-red-500 to-purple-500 flex-center shadow-lg">
           <Image
             src="/icons/Video.svg"
             width={22}
             height={16}
             alt="Video camera icon"
-            className="filter brightness-0 invert"
+            className="brightness-0 invert"
           />
         </div>
         <div>

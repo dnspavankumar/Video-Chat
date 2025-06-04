@@ -25,7 +25,7 @@ const Home = () => {
 
         {/* Multiple Gradient Overlays */}
         <div className="absolute inset-0 bg-gradient-to-r from-red-600/30 via-transparent to-purple-600/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 via-transparent to-transparent" />
 
         <div className="relative flex h-full flex-col justify-center p-8 lg:p-16">
           {/* Center - Time and Date Display */}
@@ -37,7 +37,7 @@ const Home = () => {
               {date}
             </p>
             {/* Additional info with better visibility */}
-            <p className="text-lg text-white/80 font-medium bg-black/20 backdrop-blur-sm rounded-full px-6 py-2 inline-block">
+            <p className="text-lg text-white/80 font-medium bg-gray-900/20 backdrop-blur-sm rounded-full px-6 py-2 inline-block">
               Ready to connect with your team
             </p>
           </div>
@@ -53,10 +53,10 @@ const Home = () => {
         </div>
 
         {/* Enhanced Decorative Elements */}
-        <div className="absolute top-8 right-8 w-6 h-6 bg-gradient-to-r from-red-400 to-purple-400 rounded-full opacity-60 animate-pulse shadow-lg shadow-red-400/50" />
-        <div className="absolute bottom-8 left-8 w-4 h-4 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full opacity-40 animate-bounce" />
-        <div className="absolute top-1/2 left-8 w-2 h-2 bg-gradient-to-r from-pink-400 to-red-400 rounded-full opacity-30 animate-ping" />
-        <div className="absolute bottom-1/3 right-16 w-3 h-3 bg-gradient-to-r from-red-400 to-purple-400 rounded-full opacity-50 animate-pulse delay-500" />
+        <div className="absolute top-8 right-8 size-6 bg-gradient-to-r from-red-400 to-purple-400 rounded-full opacity-60 animate-pulse shadow-lg shadow-red-400/50" />
+        <div className="absolute bottom-8 left-8 size-4 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full opacity-40 animate-bounce" />
+        <div className="absolute top-1/2 left-8 size-2 bg-gradient-to-r from-pink-400 to-red-400 rounded-full opacity-30 animate-ping" />
+        <div className="absolute bottom-1/3 right-16 size-3 bg-gradient-to-r from-red-400 to-purple-400 rounded-full opacity-50 animate-pulse delay-500" />
       </div>
 
       {/* Meeting Actions Section with Better Layout */}

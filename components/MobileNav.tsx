@@ -23,15 +23,15 @@ const MobileNav = () => {
             className="cursor-pointer sm:hidden"
           />
         </SheetTrigger>
-        <SheetContent side="left" className="border-none bg-gradient-to-b from-gray-900 via-black to-gray-900 backdrop-blur-md">
+        <SheetContent side="left" className="border-none bg-gradient-to-b from-gray-900 via-gray-900 to-gray-900 backdrop-blur-md">
           <Link href="/" className="flex items-center gap-3 mb-8">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-500 to-purple-500 flex-center">
+            <div className="size-10 rounded-xl bg-gradient-to-br from-red-500 to-purple-500 flex-center">
               <Image
                 src="/icons/Video.svg"
                 width={22}
                 height={16}
                 alt="Video camera icon"
-                className="filter brightness-0 invert"
+                className="brightness-0 invert"
               />
             </div>
             <p className="text-[26px] font-extrabold bg-gradient-to-r from-red-400 to-purple-400 bg-clip-text text-transparent">
@@ -59,7 +59,7 @@ const MobileNav = () => {
                       >
                         {/* Active indicator */}
                         {isActive && (
-                          <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-red-400 to-purple-400 rounded-r-full" />
+                          <div className="absolute left-0 inset-y-0 w-1 bg-gradient-to-b from-red-400 to-purple-400 rounded-r-full" />
                         )}
 
                         {/* Icon container */}
@@ -75,7 +75,7 @@ const MobileNav = () => {
                             alt={item.label}
                             width={18}
                             height={18}
-                            className="filter brightness-0 invert transition-all duration-300"
+                            className="brightness-0 invert transition-all duration-300"
                           />
                         </div>
 
