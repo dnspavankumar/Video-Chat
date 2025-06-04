@@ -16,7 +16,7 @@ const HomeCard = ({ className, img, title, description, handleClick }: HomeCardP
   return (
     <section
       className={cn(
-        'relative overflow-hidden bg-gradient-to-br from-gray-900/90 via-black/90 to-gray-800/90 backdrop-blur-sm px-8 py-10 flex flex-col justify-between w-full xl:max-w-[300px] min-h-[320px] rounded-3xl cursor-pointer transition-all duration-700 hover:scale-[1.05] hover:shadow-2xl hover:shadow-red-500/30 hover:-translate-y-2 group border border-gray-700/50',
+        'relative overflow-hidden bg-gradient-to-br from-gray-900/90 via-gray-900/95 to-gray-800/90 backdrop-blur-sm px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-10 flex flex-col justify-between w-full xl:max-w-[300px] min-h-[280px] sm:min-h-[300px] lg:min-h-[320px] rounded-2xl sm:rounded-3xl cursor-pointer transition-all duration-700 hover:scale-[1.02] sm:hover:scale-[1.05] hover:shadow-2xl hover:shadow-red-500/30 hover:-translate-y-1 sm:hover:-translate-y-2 group border border-gray-700/50',
         className
       )}
       onClick={handleClick}
@@ -30,16 +30,16 @@ const HomeCard = ({ className, img, title, description, handleClick }: HomeCardP
       <div className="absolute bottom-6 left-6 w-0.5 h-0.5 bg-purple-400 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-opacity duration-700 delay-200" />
 
       {/* Enhanced Icon Container */}
-      <div className="flex-center w-20 h-20 rounded-2xl bg-gradient-to-br from-red-500/25 to-purple-500/25 backdrop-blur-sm border border-red-500/40 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg shadow-red-500/20">
-        <Image src={img} alt="meeting" width={36} height={36} className="filter brightness-0 invert group-hover:scale-110 transition-transform duration-300" />
+      <div className="flex-center size-16 sm:size-18 lg:size-20 rounded-xl sm:rounded-2xl bg-gradient-to-br from-red-500/25 to-purple-500/25 backdrop-blur-sm border border-red-500/40 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg shadow-red-500/20">
+        <Image src={img} alt="meeting" width={32} height={32} className="sm:w-9 sm:h-9 lg:w-9 lg:h-9 brightness-0 invert group-hover:scale-110 transition-transform duration-300" />
       </div>
 
       {/* Enhanced Content */}
-      <div className="flex flex-col gap-4 mt-6">
-        <h1 className="text-2xl lg:text-3xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-red-400 group-hover:to-purple-400 transition-all duration-500 leading-tight">
+      <div className="flex flex-col gap-3 sm:gap-4 mt-4 sm:mt-6">
+        <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-red-400 group-hover:to-purple-400 transition-all duration-500 leading-tight">
           {title}
         </h1>
-        <p className="text-base font-medium text-gray-400 group-hover:text-gray-200 transition-colors duration-500 leading-relaxed">
+        <p className="text-sm sm:text-base font-medium text-gray-400 group-hover:text-gray-200 transition-colors duration-500 leading-relaxed">
           {description}
         </p>
 

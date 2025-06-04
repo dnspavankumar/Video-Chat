@@ -12,7 +12,7 @@ const DynamicLayout = ({ children }: DynamicLayoutProps) => {
 
   return (
     <section className={`flex-1 min-h-screen transition-all duration-300 ${isCollapsed ? 'lg:ml-[80px]' : 'lg:ml-[280px]'}`}>
-      <div className="max-w-7xl mx-auto p-8 pt-32 lg:px-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 py-6 sm:py-8 pt-24 sm:pt-28 lg:pt-32">
         <div className="relative">
           {children}
         </div>
