@@ -42,14 +42,7 @@ const Home = () => {
             </p>
           </div>
 
-          {/* Bottom Section - Quick Actions */}
-          <div className="flex justify-center pb-4">
-            <div className="flex gap-4">
-              <button className="bg-purple-500/30 hover:bg-purple-500/40 backdrop-blur-md border border-purple-500/50 rounded-xl px-8 py-4 text-white font-semibold transition-all duration-300 hover:scale-105 shadow-lg shadow-purple-500/20">
-                Join Meeting
-              </button>
-            </div>
-          </div>
+
         </div>
 
         {/* Enhanced Decorative Elements */}
