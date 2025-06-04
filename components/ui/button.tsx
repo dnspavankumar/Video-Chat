@@ -13,7 +13,7 @@ const buttonVariants = cva(
         default:
           'bg-slate-900 text-slate-50 hover:bg-slate-800/90 focus-visible:ring-slate-950 dark:bg-slate-50 dark:text-slate-900 dark:hover:bg-slate-50/90 dark:focus-visible:ring-slate-300',
         primary:
-          'relative bg-gradient-to-r from-gray-900 to-black text-white hover:from-gray-800 hover:to-gray-900 focus-visible:ring-gray-800 shadow-lg hover:shadow-xl transition-all duration-300 before:absolute before:inset-0 before:rounded-[inherit] before:p-[2px] before:bg-gradient-to-r before:from-red-500 before:via-purple-500 before:to-pink-500 before:content-[""] before:-z-10 before:rounded-md',
+          'relative bg-gradient-to-r from-gray-900 to-black text-white hover:from-gray-800 hover:to-gray-900 focus-visible:ring-gray-800 shadow-lg hover:shadow-xl transition-all duration-300 before:absolute before:inset-0 before:rounded-[inherit] before:p-[2px] before:bg-gradient-to-r before:from-red-500 before:via-purple-500 before:to-pink-500 before:content-[""] before:-z-10',
         success:
           'bg-green-500 text-white hover:bg-green-600 focus-visible:ring-green-500 shadow-lg hover:shadow-xl transition-shadow',
         warning:
@@ -25,7 +25,7 @@ const buttonVariants = cva(
         outline:
           'border border-slate-200 bg-white hover:bg-slate-100 hover:text-slate-900 focus-visible:ring-slate-950 dark:border-slate-800 dark:bg-slate-950 dark:hover:bg-slate-800 dark:hover:text-slate-50 dark:focus-visible:ring-slate-300',
         'outline-primary':
-          'relative bg-transparent text-white border-2 border-transparent hover:bg-gradient-to-r hover:from-gray-900/20 hover:to-black/20 focus-visible:ring-gray-800 before:absolute before:inset-0 before:rounded-[inherit] before:p-[2px] before:bg-gradient-to-r before:from-red-500 before:via-purple-500 before:to-pink-500 before:content-[""] before:-z-10 before:rounded-md',
+          'relative bg-transparent text-white border-2 border-transparent hover:bg-gradient-to-r hover:from-gray-900/20 hover:to-black/20 focus-visible:ring-gray-800 before:absolute before:inset-0 before:rounded-[inherit] before:p-[2px] before:bg-gradient-to-r before:from-red-500 before:via-purple-500 before:to-pink-500 before:content-[""] before:-z-10',
         secondary:
           'bg-slate-100 text-slate-900 hover:bg-slate-100/80 focus-visible:ring-slate-950 dark:bg-slate-800 dark:text-slate-50 dark:hover:bg-slate-800/80 dark:focus-visible:ring-slate-300',
         ghost:
