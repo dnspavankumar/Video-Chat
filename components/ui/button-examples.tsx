@@ -2,19 +2,16 @@
 
 import React, { useState } from 'react';
 import { Button } from './button';
-import { 
-  Video, 
-  VideoOff, 
-  Mic, 
-  MicOff, 
-  Phone, 
-  PhoneOff, 
-  Copy, 
+import {
+  Video,
+  Mic,
+  Phone,
+  PhoneOff,
+  Copy,
   Calendar,
   Users,
   Settings,
   ChevronRight,
-  Download,
   Share,
   Plus
 } from 'lucide-react';
@@ -26,7 +23,6 @@ import {
  * Use this for testing and as a reference for implementation.
  */
 export default function ButtonExamples() {
-  const [loading, setLoading] = useState(false);
   const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({});
 
   const simulateLoading = (key: string, duration = 2000) => {
