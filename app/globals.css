@@ -1,0 +1,243 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ======== stream css overrides ======== */
+.str-video__call-stats {
+  max-width: 500px;
+  position: relative;
+}
+
+.str-video__speaker-layout__wrapper {
+  max-height: 700px;
+}
+
+.str-video__participant-details {
+  color: white;
+}
+
+.str-video__menu-container {
+  color: white;
+}
+
+.str-video__notification {
+  color: white;
+}
+
+.str-video__participant-list {
+  background: linear-gradient(145deg, #1a1a1a 0%, #000000 100%);
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: white;
+  height: 100%;
+}
+
+.str-video__call-controls__button {
+  height: 40px;
+}
+
+/* Additional Stream Video overrides for red/purple theme */
+.str-video__participant-view,
+.str-video__participant-view__video-wrapper {
+  border: 2px solid rgba(239, 68, 68, 0.3) !important;
+  border-radius: 1rem !important;
+  box-shadow: 0 10px 25px -5px rgba(239, 68, 68, 0.2) !important;
+}
+
+.str-video__participant-view__bar {
+  background: linear-gradient(145deg, rgba(0, 0, 0, 0.8) 0%, rgba(26, 26, 26, 0.8) 100%) !important;
+  border: 1px solid rgba(239, 68, 68, 0.2) !important;
+}
+
+.str-video__video-fallback {
+  background: linear-gradient(145deg, #000000 0%, #1a1a1a 100%) !important;
+  border: 2px solid rgba(239, 68, 68, 0.3) !important;
+}
+
+/* Video Preview Styling */
+.str-video__video-preview,
+.str-video__video-preview video {
+  border-radius: 1rem !important;
+  border: 2px solid rgba(239, 68, 68, 0.3) !important;
+  box-shadow: 0 20px 25px -5px rgba(239, 68, 68, 0.2), 0 10px 10px -5px rgba(239, 68, 68, 0.1) !important;
+  background: linear-gradient(145deg, #000000 0%, #1a1a1a 100%) !important;
+}
+
+/* Remove blue borders and add red theme */
+.str-video__video-preview::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  padding: 2px;
+  background: linear-gradient(45deg, #ef4444, #8b5cf6, #ec4899);
+  border-radius: inherit;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask-composite: xor;
+  z-index: -1;
+}
+
+/* Device Settings Styling */
+.str-video__device-settings-panel {
+  background: linear-gradient(145deg, #000000 0%, #1a1a1a 100%) !important;
+  border: 1px solid rgba(239, 68, 68, 0.3) !important;
+  border-radius: 0.75rem !important;
+  color: white !important;
+}
+
+.str-video__device-settings-panel button {
+  background: rgba(239, 68, 68, 0.1) !important;
+  border: 1px solid rgba(239, 68, 68, 0.2) !important;
+  color: white !important;
+  border-radius: 0.5rem !important;
+}
+
+.str-video__device-settings-panel button:hover {
+  background: rgba(239, 68, 68, 0.2) !important;
+  border-color: rgba(239, 68, 68, 0.4) !important;
+}
+
+/* Custom container styling */
+.video-preview-container {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: 4px;
+  background: linear-gradient(45deg, #ef4444, #8b5cf6, #ec4899);
+}
+
+.video-preview-container::before {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  background: #000000;
+  border-radius: calc(1rem - 2px);
+  z-index: 1;
+}
+
+.video-preview-container .str-video__video-preview {
+  position: relative;
+  z-index: 2;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.device-settings-container .str-video__device-settings-panel {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.glassmorphism {
+  background: rgba(139, 92, 246, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+.glassmorphism2 {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(139, 92, 246, 0.1);
+}
+
+/* ==== clerk class override ===== */
+
+.cl-userButtonPopoverActionButtonIcon {
+  color: white;
+}
+
+.cl-logoBox {
+  height: 40px;
+}
+.cl-dividerLine {
+  background: #252a41;
+  height: 2px;
+}
+
+.cl-socialButtonsIconButton {
+  border: 3px solid #565761;
+}
+
+.cl-internal-wkkub3 {
+  color: white;
+}
+.cl-userButtonPopoverActionButton {
+  color: white;
+}
+
+/* =============================== */
+
+@layer utilities {
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
+
+  /* Black Gradient Utilities */
+  .bg-black-gradient {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+  }
+
+  .bg-dark-gradient {
+    background: linear-gradient(135deg, #0a0a0a 0%, #2a2a2a 50%, #1a1a1a 100%);
+  }
+
+  .bg-card-gradient {
+    background: linear-gradient(145deg, #1a1a1a 0%, #000000 100%);
+  }
+
+  .gradient-border {
+    position: relative;
+    background: linear-gradient(145deg, #1a1a1a 0%, #000000 100%);
+  }
+
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    background: linear-gradient(90deg, #ef4444, #8b5cf6, #ec4899);
+    border-radius: inherit;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: xor;
+    -webkit-mask-composite: xor;
+  }
+
+  .text-gradient {
+    background: linear-gradient(90deg, #ef4444, #8b5cf6, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* animation */
+
+.show-block {
+  width: 100%;
+  max-width: 350px;
+  display: block;
+  animation: show 0.7s forwards linear;
+}
+
+@keyframes show {
+  0% {
+    animation-timing-function: ease-in;
+    width: 0%;
+  }
+
+  100% {
+    animation-timing-function: ease-in;
+    width: 100%;
+  }
+}

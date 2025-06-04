@@ -1,0 +1,84 @@
+import MeetingTypeList from '@/components/MeetingTypeList';
+
+const Home = () => {
+  const now = new Date();
+
+  const time = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+  const date = (new Intl.DateTimeFormat('en-US', { dateStyle: 'full' })).format(now);
+
+  return (
+    <div className="space-y-12 text-white">
+      {/* Welcome Header */}
+      <div className="text-center space-y-4">
+        <h1 className="text-5xl lg:text-7xl font-black bg-gradient-to-r from-red-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+          Welcome Back
+        </h1>
+        <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          Ready to connect? Start or join a meeting, schedule for later, or view your recordings.
+        </p>
+      </div>
+
+      {/* Hero Section with Enhanced Design */}
+      <div className="relative h-[450px] w-full rounded-[2rem] overflow-hidden bg-gradient-to-br from-red-900/80 via-purple-900/80 to-pink-900/80 border border-red-500/30 shadow-2xl shadow-red-500/20">
+        {/* Animated Background Pattern */}
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ff0066%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2240%22%20cy%3D%2240%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30 animate-pulse" />
+
+        {/* Multiple Gradient Overlays */}
+        <div className="absolute inset-0 bg-gradient-to-r from-red-600/30 via-transparent to-purple-600/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+
+        <div className="relative flex h-full flex-col justify-center p-8 lg:p-16">
+          {/* Center - Time and Date Display */}
+          <div className="text-center space-y-6 py-4">
+            <h1 className="text-6xl lg:text-9xl font-black bg-gradient-to-r from-white via-red-200 to-purple-200 bg-clip-text text-transparent drop-shadow-2xl leading-none">
+              {time}
+            </h1>
+            <p className="text-2xl lg:text-4xl font-bold text-white/95 drop-shadow-lg">
+              {date}
+            </p>
+            {/* Additional info with better visibility */}
+            <p className="text-lg text-white/80 font-medium bg-black/20 backdrop-blur-sm rounded-full px-6 py-2 inline-block">
+              Ready to connect with your team
+            </p>
+          </div>
+
+          {/* Bottom Section - Quick Actions */}
+          <div className="flex justify-center pb-4">
+            <div className="flex gap-4">
+              <button className="bg-purple-500/30 hover:bg-purple-500/40 backdrop-blur-md border border-purple-500/50 rounded-xl px-8 py-4 text-white font-semibold transition-all duration-300 hover:scale-105 shadow-lg shadow-purple-500/20">
+                Join Meeting
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Enhanced Decorative Elements */}
+        <div className="absolute top-8 right-8 w-6 h-6 bg-gradient-to-r from-red-400 to-purple-400 rounded-full opacity-60 animate-pulse shadow-lg shadow-red-400/50" />
+        <div className="absolute bottom-8 left-8 w-4 h-4 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full opacity-40 animate-bounce" />
+        <div className="absolute top-1/2 left-8 w-2 h-2 bg-gradient-to-r from-pink-400 to-red-400 rounded-full opacity-30 animate-ping" />
+        <div className="absolute bottom-1/3 right-16 w-3 h-3 bg-gradient-to-r from-red-400 to-purple-400 rounded-full opacity-50 animate-pulse delay-500" />
+      </div>
+
+      {/* Meeting Actions Section with Better Layout */}
+      <div className="space-y-8">
+        {/* Section Header */}
+        <div className="text-center space-y-4">
+          <h2 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white via-red-200 to-purple-200 bg-clip-text text-transparent">
+            What would you like to do?
+          </h2>
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            Choose from our powerful meeting tools to connect with your team
+          </p>
+          <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-purple-500 rounded-full mx-auto" />
+        </div>
+
+        {/* Enhanced Meeting Cards */}
+        <div className="relative">
+          <MeetingTypeList />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Home;
