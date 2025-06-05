@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     apple: "/icons/Video.svg",
   },
   manifest: "/manifest.json",
-  themeColor: "#ef4444",
+  themeColor: "#1c1c1c",
   colorScheme: "dark",
   viewport: {
     width: "device-width",
@@ -77,12 +77,12 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="Meet" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
-        <meta name="msapplication-TileColor" content="#ef4444" />
+        <meta name="msapplication-TileColor" content="#1c1c1c" />
         <meta name="msapplication-tap-highlight" content="no" />
         <link rel="apple-touch-icon" href="/icons/Video.svg" />
         <link rel="icon" type="image/svg+xml" href="/icons/Video.svg" />
         <link rel="manifest" href="/manifest.json" />
-        <link rel="mask-icon" href="/icons/Video.svg" color="#ef4444" />
+        <link rel="mask-icon" href="/icons/Video.svg" color="#1c1c1c" />
         <link rel="shortcut icon" href="/icons/Video.svg" />
       </head>
       <ClerkProvider
