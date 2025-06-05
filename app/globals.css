@@ -2,6 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Override Tailwind base styles for form elements */
+@layer base {
+  textarea {
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(239, 68, 68, 0.2) !important;
+    color: white !important;
+    border-radius: 0.75rem !important;
+  }
+
+  textarea:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.5) !important;
+    border-color: rgba(239, 68, 68, 0.5) !important;
+  }
+
+  textarea::placeholder {
+    color: rgba(156, 163, 175, 1) !important;
+  }
+
+  input[type="text"], input[type="email"], input[type="password"] {
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(239, 68, 68, 0.2) !important;
+    color: white !important;
+    border-radius: 0.75rem !important;
+  }
+
+  input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.5) !important;
+    border-color: rgba(239, 68, 68, 0.5) !important;
+  }
+
+  input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="password"]::placeholder {
+    color: rgba(156, 163, 175, 1) !important;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -145,6 +184,139 @@
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(139, 92, 246, 0.1);
+}
+
+/* ==== Textarea and Input Overrides ===== */
+textarea {
+  background: rgba(0, 0, 0, 0.4) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(239, 68, 68, 0.2) !important;
+  color: white !important;
+  border-radius: 0.75rem !important;
+}
+
+textarea:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.5) !important;
+  border-color: rgba(239, 68, 68, 0.5) !important;
+}
+
+textarea::placeholder {
+  color: rgba(156, 163, 175, 1) !important;
+}
+
+input[type="text"], input[type="email"], input[type="password"], input {
+  background: rgba(0, 0, 0, 0.4) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(239, 68, 68, 0.2) !important;
+  color: white !important;
+  border-radius: 0.75rem !important;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, input:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.5) !important;
+  border-color: rgba(239, 68, 68, 0.5) !important;
+}
+
+input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="password"]::placeholder, input::placeholder {
+  color: rgba(156, 163, 175, 1) !important;
+}
+
+/* ==== Modal Specific Overrides ===== */
+[role="dialog"] textarea,
+.modal textarea,
+div[data-state="open"] textarea {
+  background: rgba(0, 0, 0, 0.4) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(239, 68, 68, 0.2) !important;
+  color: white !important;
+  border-radius: 0.75rem !important;
+}
+
+[role="dialog"] input,
+.modal input,
+div[data-state="open"] input {
+  background: rgba(0, 0, 0, 0.4) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(239, 68, 68, 0.2) !important;
+  color: white !important;
+  border-radius: 0.75rem !important;
+}
+
+/* ==== React DatePicker Overrides ===== */
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker__input-container input {
+  background: rgba(0, 0, 0, 0.4) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(239, 68, 68, 0.2) !important;
+  color: white !important;
+  border-radius: 0.75rem !important;
+  padding: 0.75rem !important;
+  width: 100% !important;
+}
+
+.react-datepicker__input-container input:focus {
+  outline: none !important;
+  ring: 2px solid rgba(239, 68, 68, 0.5) !important;
+  border-color: rgba(239, 68, 68, 0.5) !important;
+}
+
+.react-datepicker__input-container input::placeholder {
+  color: rgba(156, 163, 175, 1) !important;
+}
+
+.react-datepicker {
+  background: linear-gradient(135deg, #000000 0%, #374151 50%, #000000 100%) !important;
+  border: 1px solid rgba(239, 68, 68, 0.3) !important;
+  border-radius: 0.75rem !important;
+  color: white !important;
+}
+
+.react-datepicker__header {
+  background: rgba(0, 0, 0, 0.6) !important;
+  border-bottom: 1px solid rgba(239, 68, 68, 0.2) !important;
+  color: white !important;
+}
+
+.react-datepicker__current-month,
+.react-datepicker__day-name {
+  color: white !important;
+}
+
+.react-datepicker__day {
+  color: white !important;
+}
+
+.react-datepicker__day:hover {
+  background: rgba(239, 68, 68, 0.3) !important;
+  color: white !important;
+}
+
+.react-datepicker__day--selected {
+  background: linear-gradient(45deg, #ef4444, #8b5cf6) !important;
+  color: white !important;
+}
+
+.react-datepicker__time-container {
+  background: rgba(0, 0, 0, 0.8) !important;
+  border-left: 1px solid rgba(239, 68, 68, 0.2) !important;
+}
+
+.react-datepicker__time-list-item {
+  color: white !important;
+}
+
+.react-datepicker__time-list-item:hover {
+  background: rgba(239, 68, 68, 0.3) !important;
+}
+
+.react-datepicker__time-list-item--selected {
+  background: linear-gradient(45deg, #ef4444, #8b5cf6) !important;
+  color: white !important;
 }
 
 /* ==== clerk class override ===== */

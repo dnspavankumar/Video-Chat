@@ -114,7 +114,14 @@ const MeetingTypeList = () => {
               Add a description
             </label>
             <Textarea
-              className="border border-red-500/20 bg-black/40 backdrop-blur-sm text-white placeholder:text-gray-400 focus-visible:ring-2 focus-visible:ring-red-500/50 focus-visible:ring-offset-0 rounded-xl"
+              className="!border-red-500/20 !bg-black/40 !backdrop-blur-sm !text-white !placeholder:text-gray-400 focus-visible:!ring-2 focus-visible:!ring-red-500/50 focus-visible:!ring-offset-0 !rounded-xl"
+              style={{
+                backgroundColor: 'rgba(0, 0, 0, 0.4)',
+                backdropFilter: 'blur(12px)',
+                border: '1px solid rgba(239, 68, 68, 0.2)',
+                color: 'white',
+                borderRadius: '0.75rem'
+              }}
               onChange={(e) =>
                 setValues({ ...values, description: e.target.value })
               }
@@ -163,7 +170,14 @@ const MeetingTypeList = () => {
         <Input
           placeholder="Meeting link"
           onChange={(e) => setValues({ ...values, link: e.target.value })}
-          className="border border-red-500/20 bg-black/40 backdrop-blur-sm text-white placeholder:text-gray-400 focus-visible:ring-2 focus-visible:ring-red-500/50 focus-visible:ring-offset-0 rounded-xl px-4 py-3"
+          className="!border-red-500/20 !bg-black/40 !backdrop-blur-sm !text-white !placeholder:text-gray-400 focus-visible:!ring-2 focus-visible:!ring-red-500/50 focus-visible:!ring-offset-0 !rounded-xl px-4 py-3"
+          style={{
+            backgroundColor: 'rgba(0, 0, 0, 0.4)',
+            backdropFilter: 'blur(12px)',
+            border: '1px solid rgba(239, 68, 68, 0.2)',
+            color: 'white',
+            borderRadius: '0.75rem'
+          }}
         />
       </MeetingModal>
 

@@ -19,7 +19,7 @@ const Home = () => {
       </div>
 
       {/* Hero Section with Enhanced Design */}
-      <div className="relative h-[250px] sm:h-[350px] md:h-[400px] lg:h-[450px] w-full rounded-xl sm:rounded-2xl lg:rounded-[2rem] overflow-hidden bg-gradient-to-br from-red-900/80 via-purple-900/80 to-pink-900/80 border border-red-500/30 shadow-2xl shadow-red-500/20 mx-2 sm:mx-0">
+      <div className="relative h-[180px] sm:h-[350px] md:h-[400px] lg:h-[450px] w-full rounded-xl sm:rounded-2xl lg:rounded-[2rem] overflow-hidden bg-gradient-to-br from-red-900/80 via-purple-900/80 to-pink-900/80 border border-red-500/30 shadow-2xl shadow-red-500/20 mx-2 sm:mx-0">
         {/* Animated Background Pattern */}
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ff0066%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2240%22%20cy%3D%2240%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30 animate-pulse" />
 
