@@ -19,19 +19,19 @@ const StatusBarManager = () => {
       }
 
       // Update theme-color for light mode
-      let themeColorLightMeta = document.querySelector('meta[name="theme-color"][media="(prefers-color-scheme: light)"]');
+      const themeColorLightMeta = document.querySelector('meta[name="theme-color"][media="(prefers-color-scheme: light)"]');
       if (themeColorLightMeta) {
         themeColorLightMeta.setAttribute('content', color);
       }
 
       // Update theme-color for dark mode
-      let themeColorDarkMeta = document.querySelector('meta[name="theme-color"][media="(prefers-color-scheme: dark)"]');
+      const themeColorDarkMeta = document.querySelector('meta[name="theme-color"][media="(prefers-color-scheme: dark)"]');
       if (themeColorDarkMeta) {
         themeColorDarkMeta.setAttribute('content', color);
       }
 
       // Update Apple status bar style
-      let appleStatusBarMeta = document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]');
+      const appleStatusBarMeta = document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]');
       if (appleStatusBarMeta) {
         appleStatusBarMeta.setAttribute('content', 'default');
       }
