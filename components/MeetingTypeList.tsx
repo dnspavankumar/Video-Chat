@@ -70,7 +70,7 @@ const MeetingTypeList = () => {
   const meetingLink = `${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${callDetail?.id}`;
 
   return (
-    <section className="grid grid-cols-1 gap-4 sm:gap-6 md:gap-8 sm:grid-cols-2 xl:grid-cols-4 relative px-2 sm:px-0">
+    <section className="grid grid-cols-2 gap-3 sm:gap-6 md:gap-8 md:grid-cols-2 xl:grid-cols-4 relative px-2 sm:px-0">
       {/* Background glow effects */}
       <div className="absolute -inset-4 bg-gradient-to-r from-red-500/5 via-purple-500/5 to-pink-500/5 rounded-3xl blur-xl" />
       <HomeCard

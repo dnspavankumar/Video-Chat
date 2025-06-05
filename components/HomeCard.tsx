@@ -16,7 +16,7 @@ const HomeCard = ({ className, img, title, description, handleClick }: HomeCardP
   return (
     <section
       className={cn(
-        'relative overflow-hidden bg-gradient-to-br from-gray-900/90 via-gray-900/95 to-gray-800/90 backdrop-blur-sm px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-10 flex flex-col justify-between w-full xl:max-w-[300px] min-h-[280px] sm:min-h-[300px] lg:min-h-[320px] rounded-2xl sm:rounded-3xl cursor-pointer transition-all duration-700 hover:scale-[1.02] sm:hover:scale-[1.05] hover:shadow-2xl hover:shadow-red-500/30 hover:-translate-y-1 sm:hover:-translate-y-2 group border border-gray-700/50',
+        'relative overflow-hidden bg-gradient-to-br from-gray-900/90 via-gray-900/95 to-gray-800/90 backdrop-blur-sm px-3 sm:px-6 lg:px-8 py-3 sm:py-6 lg:py-8 flex flex-col justify-between w-full xl:max-w-[300px] aspect-square sm:aspect-auto sm:min-h-[220px] lg:min-h-[260px] rounded-xl sm:rounded-3xl cursor-pointer transition-all duration-700 hover:scale-[1.02] sm:hover:scale-[1.05] hover:shadow-2xl hover:shadow-red-500/30 hover:-translate-y-1 sm:hover:-translate-y-2 group border border-gray-700/50',
         className
       )}
       onClick={handleClick}
@@ -30,29 +30,29 @@ const HomeCard = ({ className, img, title, description, handleClick }: HomeCardP
       <div className="absolute bottom-6 left-6 w-0.5 h-0.5 bg-purple-400 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-opacity duration-700 delay-200" />
 
       {/* Enhanced Icon Container */}
-      <div className="flex-center size-16 sm:size-18 lg:size-20 rounded-xl sm:rounded-2xl bg-gradient-to-br from-red-500/25 to-purple-500/25 backdrop-blur-sm border border-red-500/40 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg shadow-red-500/20">
-        <Image src={img} alt="meeting" width={32} height={32} className="sm:w-9 sm:h-9 lg:w-9 lg:h-9 brightness-0 invert group-hover:scale-110 transition-transform duration-300" />
+      <div className="flex-center size-10 sm:size-14 lg:size-16 rounded-lg sm:rounded-xl bg-gradient-to-br from-red-500/25 to-purple-500/25 backdrop-blur-sm border border-red-500/40 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg shadow-red-500/20">
+        <Image src={img} alt="meeting" width={20} height={20} className="sm:w-7 sm:h-7 lg:w-8 lg:h-8 brightness-0 invert group-hover:scale-110 transition-transform duration-300" />
       </div>
 
       {/* Enhanced Content */}
-      <div className="flex flex-col gap-3 sm:gap-4 mt-4 sm:mt-6">
-        <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-red-400 group-hover:to-purple-400 transition-all duration-500 leading-tight">
+      <div className="flex flex-col gap-1 sm:gap-3 mt-2 sm:mt-4">
+        <h1 className="text-sm sm:text-xl lg:text-2xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-red-400 group-hover:to-purple-400 transition-all duration-500 leading-tight">
           {title}
         </h1>
-        <p className="text-sm sm:text-base font-medium text-gray-400 group-hover:text-gray-200 transition-colors duration-500 leading-relaxed">
+        <p className="text-xs sm:text-sm lg:text-base font-medium text-gray-400 group-hover:text-gray-200 transition-colors duration-500 leading-tight sm:leading-relaxed">
           {description}
         </p>
 
-        {/* Action indicator */}
-        <div className="flex items-center gap-2 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200">
-          <div className="w-2 h-2 bg-gradient-to-r from-red-400 to-purple-400 rounded-full animate-pulse" />
+        {/* Action indicator - hidden on mobile */}
+        <div className="hidden sm:flex items-center gap-1.5 mt-1 sm:mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200">
+          <div className="w-1.5 h-1.5 bg-gradient-to-r from-red-400 to-purple-400 rounded-full animate-pulse" />
           <span className="text-xs text-gray-300 font-medium">Click to continue</span>
         </div>
       </div>
 
       {/* Enhanced Decorative Elements */}
-      <div className="absolute top-6 right-6 w-3 h-3 bg-gradient-to-r from-red-500 to-purple-500 rounded-full opacity-40 group-hover:opacity-100 group-hover:scale-150 transition-all duration-500" />
-      <div className="absolute bottom-6 right-6 w-2 h-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-30 group-hover:opacity-80 group-hover:animate-bounce transition-all duration-500 delay-100" />
+      <div className="absolute top-3 sm:top-6 right-3 sm:right-6 w-2 sm:w-3 h-2 sm:h-3 bg-gradient-to-r from-red-500 to-purple-500 rounded-full opacity-40 group-hover:opacity-100 group-hover:scale-150 transition-all duration-500" />
+      <div className="absolute bottom-3 sm:bottom-6 right-3 sm:right-6 w-1.5 sm:w-2 h-1.5 sm:h-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-30 group-hover:opacity-80 group-hover:animate-bounce transition-all duration-500 delay-100" />
 
       {/* Glow effect */}
       <div className="absolute inset-0 bg-gradient-to-r from-red-500/0 via-red-500/5 to-purple-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-3xl" />
