@@ -8,6 +8,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import PWAInstaller from "@/components/PWAInstaller";
+import StatusBarManager from "@/components/StatusBarManager";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -73,12 +74,16 @@ export default function RootLayout({
       <head>
         <meta name="application-name" content="Meet" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="Meet" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
         <meta name="msapplication-TileColor" content="#1c1c1c" />
         <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="theme-color" content="#1c1c1c" />
+        <meta name="theme-color" media="(prefers-color-scheme: light)" content="#1c1c1c" />
+        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1c1c1c" />
+        <meta name="color-scheme" content="dark" />
         <link rel="apple-touch-icon" href="/icons/Video.svg" />
         <link rel="icon" type="image/svg+xml" href="/icons/Video.svg" />
         <link rel="manifest" href="/manifest.json" />
@@ -101,6 +106,7 @@ export default function RootLayout({
         }}
       >
         <body className={`${inter.className} bg-black-gradient min-h-screen`}>
+          <StatusBarManager />
           <PWAInstaller />
           <Toaster />
           {children}

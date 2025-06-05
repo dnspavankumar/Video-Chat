@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Status bar and viewport styling */
+:root {
+  --status-bar-color: #1c1c1c;
+}
+
+/* Ensure status bar matches header */
+html {
+  background-color: #1c1c1c;
+}
+
+body {
+  background-color: #000000;
+}
+
 /* Override Tailwind base styles for form elements */
 @layer base {
   textarea {
