@@ -64,11 +64,8 @@ const Navbar = () => {
       </Link>
 
       {/* Main navbar content */}
-      <div className="flex-1 flex justify-between items-center px-8 py-5">
-        {/* Spacer for better layout */}
-        <div className="flex-1"></div>
-
-        <div className="flex items-center gap-6">
+      <div className="flex-1 flex justify-end items-center px-8 py-5">
+        <div className="flex items-center gap-4">
           <SignedIn>
             <UserButton
               appearance={{

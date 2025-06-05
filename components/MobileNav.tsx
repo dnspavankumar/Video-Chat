@@ -12,18 +12,20 @@ const MobileNav = () => {
   const pathname = usePathname();
 
   return (
-    <section className="w-full max-w-[264px]">
+    <section className="w-full max-w-[264px] lg:hidden">
       <Sheet>
         <SheetTrigger asChild>
-          <Image
-            src="/icons/hamburger.svg"
-            width={36}
-            height={36}
-            alt="hamburger icon"
-            className="cursor-pointer lg:hidden"
-          />
+          <div className="flex items-center justify-center size-10 rounded-xl bg-gradient-to-br from-red-500/20 to-purple-500/20 hover:from-red-500/30 hover:to-purple-500/30 border border-red-500/30 hover:border-red-500/50 transition-all duration-300 cursor-pointer">
+            <Image
+              src="/icons/hamburger.svg"
+              width={24}
+              height={24}
+              alt="hamburger icon"
+              className="brightness-0 invert"
+            />
+          </div>
         </SheetTrigger>
-        <SheetContent side="left" className="border-none bg-gradient-to-b from-gray-900 via-gray-900 to-gray-900 backdrop-blur-md">
+        <SheetContent side="left" className="border-none bg-gradient-to-b from-gray-900/95 via-gray-900/95 to-gray-900/95 backdrop-blur-xl border-r border-red-500/30 shadow-2xl shadow-red-500/10">
           <Link href="/" className="flex items-center gap-3 mb-8">
             <div className="size-10 rounded-xl bg-gradient-to-br from-red-500 to-purple-500 flex-center">
               <Image
