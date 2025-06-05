@@ -226,7 +226,8 @@ input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="p
 /* ==== Modal Specific Overrides ===== */
 [role="dialog"] textarea,
 .modal textarea,
-div[data-state="open"] textarea {
+div[data-state="open"] textarea,
+div[data-radix-dialog-content] textarea {
   background: rgba(0, 0, 0, 0.4) !important;
   backdrop-filter: blur(12px) !important;
   border: 1px solid rgba(239, 68, 68, 0.2) !important;
@@ -236,11 +237,27 @@ div[data-state="open"] textarea {
 
 [role="dialog"] input,
 .modal input,
-div[data-state="open"] input {
+div[data-state="open"] input,
+div[data-radix-dialog-content] input {
   background: rgba(0, 0, 0, 0.4) !important;
   backdrop-filter: blur(12px) !important;
   border: 1px solid rgba(239, 68, 68, 0.2) !important;
   color: white !important;
+  border-radius: 0.75rem !important;
+}
+
+/* ==== Ultra Specific Overrides ===== */
+* textarea {
+  background-color: rgba(0, 0, 0, 0.4) !important;
+  color: white !important;
+  border: 1px solid rgba(239, 68, 68, 0.2) !important;
+  border-radius: 0.75rem !important;
+}
+
+* input[type="text"] {
+  background-color: rgba(0, 0, 0, 0.4) !important;
+  color: white !important;
+  border: 1px solid rgba(239, 68, 68, 0.2) !important;
   border-radius: 0.75rem !important;
 }
 

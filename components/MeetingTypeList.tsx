@@ -10,6 +10,7 @@ import { Call, useStreamVideoClient } from '@stream-io/video-react-sdk';
 import { useUser } from '@clerk/nextjs';
 import Loader from './Loader';
 import { Textarea } from './ui/textarea';
+import { DarkTextarea } from './ui/dark-textarea';
 import ReactDatePicker from 'react-datepicker';
 import { useToast } from './ui/use-toast';
 import { Input } from './ui/input';
@@ -113,15 +114,8 @@ const MeetingTypeList = () => {
             <label className="text-base font-normal leading-[22.4px] text-gray-300">
               Add a description
             </label>
-            <Textarea
-              className="!border-red-500/20 !bg-black/40 !backdrop-blur-sm !text-white !placeholder:text-gray-400 focus-visible:!ring-2 focus-visible:!ring-red-500/50 focus-visible:!ring-offset-0 !rounded-xl"
-              style={{
-                backgroundColor: 'rgba(0, 0, 0, 0.4)',
-                backdropFilter: 'blur(12px)',
-                border: '1px solid rgba(239, 68, 68, 0.2)',
-                color: 'white',
-                borderRadius: '0.75rem'
-              }}
+            <DarkTextarea
+              placeholder="Add a description for your meeting..."
               onChange={(e) =>
                 setValues({ ...values, description: e.target.value })
               }
