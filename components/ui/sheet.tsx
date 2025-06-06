@@ -3,7 +3,7 @@
 import * as React from 'react';
 import * as SheetPrimitive from '@radix-ui/react-dialog';
 import { cva, type VariantProps } from 'class-variance-authority';
-import { X } from 'lucide-react';
+
 
 import { cn } from '@/lib/utils';
 
@@ -68,8 +68,12 @@ const SheetContent = React.forwardRef<
     >
       {children}
       {!hideCloseButton && (
-        <SheetPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-white transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-slate-100 dark:ring-offset-slate-950 dark:focus:ring-slate-300 dark:data-[state=open]:bg-slate-800">
-          <X className="size-4 text-white" />
+        <SheetPrimitive.Close className="absolute right-4 top-4 rounded-xl p-2 bg-gradient-to-br from-red-500/20 to-purple-500/20 hover:from-red-500/30 hover:to-purple-500/30 border border-red-500/30 hover:border-red-500/50 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-red-500/50">
+          <svg className="size-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20.05 11H3.95C3.42533 11 3 11.4253 3 11.95V12.05C3 12.5747 3.42533 13 3.95 13H20.05C20.5747 13 21 12.5747 21 12.05V11.95C21 11.4253 20.5747 11 20.05 11Z" />
+            <path d="M20.05 16H3.95C3.42533 16 3 16.4253 3 16.95V17.05C3 17.5747 3.42533 18 3.95 18H20.05C20.5747 18 21 17.5747 21 17.05V16.95C21 16.4253 20.5747 16 20.05 16Z" />
+            <path d="M20.05 6H3.95C3.42533 6 3 6.42533 3 6.95V7.05C3 7.57467 3.42533 8 3.95 8H20.05C20.5747 8 21 7.57467 21 7.05V6.95C21 6.42533 20.5747 6 20.05 6Z" />
+          </svg>
           <span className="sr-only">Close</span>
         </SheetPrimitive.Close>
       )}
