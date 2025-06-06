@@ -163,7 +163,7 @@ const MeetingTypeList = () => {
         <Input
           placeholder="Meeting link"
           onChange={(e) => setValues({ ...values, link: e.target.value })}
-          className="!border-red-500/20 !bg-black/40 !backdrop-blur-sm !text-white !placeholder:text-gray-400 focus-visible:!ring-2 focus-visible:!ring-red-500/50 focus-visible:!ring-offset-0 !rounded-xl px-4 py-3"
+          className="!border-red-500/20 !bg-black/40 !backdrop-blur-sm !text-white !placeholder:text-gray-400 focus-visible:!ring-2 focus-visible:!ring-red-500/50 focus-visible:!ring-offset-0 !rounded-xl px-4 py-3 w-full"
           style={{
             backgroundColor: 'rgba(0, 0, 0, 0.4)',
             backdropFilter: 'blur(12px)',

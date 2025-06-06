@@ -440,6 +440,63 @@ button[aria-label*="Close"] svg[data-lucide="x"] {
   display: none !important;
 }
 
+/* ==== Mobile Dialog and Form Styling ===== */
+
+/* Ensure dialogs have proper margins on mobile */
+@media (max-width: 640px) {
+  [data-radix-dialog-content] {
+    margin: 1rem !important;
+    width: calc(100% - 2rem) !important;
+    max-width: calc(100% - 2rem) !important;
+    border-radius: 1rem !important;
+  }
+
+  /* Ensure form elements have proper spacing on mobile */
+  .meeting-modal-content {
+    padding: 1rem !important;
+    gap: 1rem !important;
+  }
+
+  /* Ensure buttons don't take full width unnecessarily */
+  .meeting-modal-button {
+    margin: 0 auto !important;
+    max-width: 100% !important;
+    border-radius: 0.75rem !important;
+  }
+
+  /* Ensure input and textarea elements have proper mobile styling */
+  .meeting-modal-content input,
+  .meeting-modal-content textarea {
+    border-radius: 0.75rem !important;
+    padding: 0.75rem !important;
+    margin: 0 !important;
+  }
+
+  /* Ensure proper spacing for form labels */
+  .meeting-modal-content label {
+    margin-bottom: 0.5rem !important;
+  }
+
+  /* Ensure proper spacing between form elements */
+  .meeting-modal-content > div {
+    gap: 0.75rem !important;
+  }
+
+  /* Ensure ReactDatePicker has proper mobile styling */
+  .react-datepicker-wrapper {
+    width: 100% !important;
+  }
+
+  .react-datepicker__input-container input {
+    width: 100% !important;
+    border-radius: 0.75rem !important;
+    padding: 0.75rem !important;
+    background: rgba(0, 0, 0, 0.4) !important;
+    border: 1px solid rgba(239, 68, 68, 0.2) !important;
+    color: white !important;
+  }
+}
+
 /* ==== clerk class override ===== */
 
 .cl-userButtonPopoverActionButtonIcon {

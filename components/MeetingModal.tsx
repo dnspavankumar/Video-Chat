@@ -35,7 +35,7 @@ const MeetingModal = ({
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent
-        className="flex w-full max-w-[520px] flex-col gap-6 px-6 py-9 text-white shadow-2xl [&>button]:hidden"
+        className="flex w-[calc(100%-2rem)] sm:w-full max-w-[520px] flex-col gap-6 px-4 sm:px-6 py-6 sm:py-9 text-white shadow-2xl [&>button]:hidden rounded-2xl meeting-modal-content"
         style={{
           background: 'linear-gradient(135deg, #000000 0%, #374151 50%, #000000 100%)',
           border: '1px solid rgba(239, 68, 68, 0.3)',
@@ -64,13 +64,13 @@ const MeetingModal = ({
               <Image src={image} alt="checked" width={72} height={72} />
             </div>
           )}
-          <h1 className={cn("text-3xl font-bold leading-[42px] bg-gradient-to-r from-white via-red-200 to-purple-200 bg-clip-text text-transparent", className)}>
+          <h1 className={cn("text-2xl sm:text-3xl font-bold leading-[42px] bg-gradient-to-r from-white via-red-200 to-purple-200 bg-clip-text text-transparent text-center", className)}>
             {title}
           </h1>
           {children}
           <Button
             className={cn(
-              "bg-gradient-to-r from-red-500 via-purple-500 to-pink-500 hover:from-red-600 hover:via-purple-600 hover:to-pink-600 text-white font-semibold py-3 px-6 rounded-xl shadow-lg shadow-red-500/25 hover:shadow-xl hover:shadow-red-500/30 transition-all duration-300 hover:scale-105 focus-visible:ring-2 focus-visible:ring-red-500/50 focus-visible:ring-offset-0 border-0",
+              "bg-gradient-to-r from-red-500 via-purple-500 to-pink-500 hover:from-red-600 hover:via-purple-600 hover:to-pink-600 text-white font-semibold py-3 px-6 rounded-xl shadow-lg shadow-red-500/25 hover:shadow-xl hover:shadow-red-500/30 transition-all duration-300 hover:scale-105 focus-visible:ring-2 focus-visible:ring-red-500/50 focus-visible:ring-offset-0 border-0 w-full meeting-modal-button",
               buttonClassName
             )}
             onClick={handleClick}
