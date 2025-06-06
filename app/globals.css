@@ -16,6 +16,11 @@ body {
   background-color: #000000;
 }
 
+/* Enhanced black-dominant theme */
+.bg-black-gradient {
+  background: linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #000000 100%);
+}
+
 /* Override Tailwind base styles for form elements */
 @layer base {
   textarea {

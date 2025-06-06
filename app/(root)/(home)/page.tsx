@@ -8,14 +8,13 @@ const Home = () => {
 
   return (
     <div className="space-y-3 sm:space-y-4 lg:space-y-6 text-white">
-      {/* Hero Section with Enhanced Design */}
-      <div className="relative h-[140px] sm:h-[200px] md:h-[240px] lg:h-[280px] w-full rounded-xl sm:rounded-2xl lg:rounded-[2rem] overflow-hidden bg-gradient-to-br from-red-900/80 via-purple-900/80 to-pink-900/80 border border-red-500/30 shadow-2xl shadow-red-500/20 mx-2 sm:mx-0">
-        {/* Animated Background Pattern */}
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ff0066%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2240%22%20cy%3D%2240%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30 animate-pulse" />
+      {/* Hero Section with Black Dominant Design */}
+      <div className="relative h-[140px] sm:h-[200px] md:h-[240px] lg:h-[280px] w-full rounded-xl sm:rounded-2xl lg:rounded-[2rem] overflow-hidden bg-black mx-2 sm:mx-0" style={{border: '2px solid transparent', backgroundImage: 'linear-gradient(black, black), linear-gradient(to right, rgba(239, 68, 68, 0.4), rgba(168, 85, 247, 0.4), rgba(239, 68, 68, 0.4))', backgroundOrigin: 'border-box', backgroundClip: 'content-box, border-box'}}>
+        {/* Animated Background Pattern - Keeping the dots you love! */}
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ff0066%22%20fill-opacity%3D%220.08%22%3E%3Ccircle%20cx%3D%2240%22%20cy%3D%2240%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-40 animate-pulse bg-black" />
 
-        {/* Multiple Gradient Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-r from-red-600/30 via-transparent to-purple-600/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 via-transparent to-transparent" />
+        {/* Pure black background to ensure no color bleeding */}
+        <div className="absolute inset-0 bg-black" />
 
         <div className="relative flex h-full flex-col justify-center p-3 sm:p-4 md:p-6 lg:p-8">
           {/* Center - Time and Date Display */}
@@ -35,10 +34,12 @@ const Home = () => {
 
         </div>
 
-        {/* Enhanced Decorative Elements */}
-        <div className="absolute top-4 sm:top-6 lg:top-8 right-4 sm:right-6 lg:right-8 size-4 sm:size-5 lg:size-6 bg-gradient-to-r from-red-400 to-purple-400 rounded-full opacity-60 animate-pulse shadow-lg shadow-red-400/50" />
-        <div className="absolute bottom-4 sm:bottom-6 lg:bottom-8 left-4 sm:left-6 lg:left-8 size-3 sm:size-3.5 lg:size-4 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full opacity-40 animate-bounce" />
-        <div className="absolute top-1/2 left-4 sm:left-6 lg:left-8 size-1.5 sm:size-2 bg-gradient-to-r from-pink-400 to-red-400 rounded-full opacity-30 animate-ping" />
+        {/* Enhanced Decorative Elements - Your beloved dots! */}
+        <div className="absolute top-4 sm:top-6 lg:top-8 right-4 sm:right-6 lg:right-8 size-4 sm:size-5 lg:size-6 bg-gradient-to-r from-red-400 to-purple-400 rounded-full opacity-70 animate-pulse shadow-lg shadow-red-400/60" />
+        <div className="absolute bottom-4 sm:bottom-6 lg:bottom-8 left-4 sm:left-6 lg:left-8 size-3 sm:size-3.5 lg:size-4 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full opacity-50 animate-bounce" />
+        <div className="absolute top-1/2 left-4 sm:left-6 lg:left-8 size-1.5 sm:size-2 bg-gradient-to-r from-pink-400 to-red-400 rounded-full opacity-40 animate-ping" />
+        <div className="absolute top-1/3 right-1/4 size-2 bg-gradient-to-r from-red-300 to-purple-300 rounded-full opacity-30 animate-pulse delay-500" />
+        <div className="absolute bottom-1/3 right-1/3 size-1 bg-gradient-to-r from-purple-300 to-pink-300 rounded-full opacity-25 animate-ping delay-1000" />
         <div className="absolute bottom-1/3 right-8 sm:right-12 lg:right-16 size-2 sm:size-2.5 lg:size-3 bg-gradient-to-r from-red-400 to-purple-400 rounded-full opacity-50 animate-pulse delay-500" />
       </div>
 

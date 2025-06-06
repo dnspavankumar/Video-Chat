@@ -16,14 +16,13 @@ const HomeCard = ({ className, img, title, description, handleClick }: HomeCardP
   return (
     <section
       className={cn(
-        'relative overflow-hidden bg-gradient-to-br from-gray-900/90 via-gray-900/95 to-gray-800/90 backdrop-blur-sm px-3 sm:px-6 lg:px-8 py-3 sm:py-6 lg:py-8 flex flex-col justify-between w-full xl:max-w-[300px] aspect-square sm:aspect-auto sm:min-h-[220px] lg:min-h-[260px] rounded-xl sm:rounded-3xl cursor-pointer transition-all duration-700 hover:scale-[1.02] sm:hover:scale-[1.05] hover:shadow-2xl hover:shadow-red-500/30 hover:-translate-y-1 sm:hover:-translate-y-2 group border border-gray-700/50',
+        'relative overflow-hidden bg-gradient-to-br from-black via-gray-950/95 to-black backdrop-blur-sm px-3 sm:px-6 lg:px-8 py-3 sm:py-6 lg:py-8 flex flex-col justify-between w-full xl:max-w-[300px] aspect-square sm:aspect-auto sm:min-h-[220px] lg:min-h-[260px] rounded-xl sm:rounded-3xl cursor-pointer transition-all duration-700 hover:scale-[1.02] sm:hover:scale-[1.05] hover:shadow-2xl hover:shadow-red-500/30 hover:-translate-y-1 sm:hover:-translate-y-2 group border border-gray-800/60',
         className
       )}
       onClick={handleClick}
     >
-      {/* Enhanced Gradient Border Effect */}
-      <div className="absolute inset-0 bg-gradient-to-r from-red-500 via-purple-500 to-pink-500 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-10" />
-      <div className="absolute inset-[2px] bg-gradient-to-br from-gray-900/95 via-black/95 to-gray-800/95 rounded-3xl -z-10" />
+      {/* Simple border effect without overlay */}
+      <div className="absolute inset-[2px] bg-gradient-to-br from-black via-gray-950/98 to-black rounded-3xl -z-10" />
 
       {/* Floating particles */}
       <div className="absolute top-4 right-4 w-1 h-1 bg-red-400 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-500" />
@@ -36,7 +35,7 @@ const HomeCard = ({ className, img, title, description, handleClick }: HomeCardP
 
       {/* Enhanced Content */}
       <div className="flex flex-col gap-1 sm:gap-3 mt-2 sm:mt-4">
-        <h1 className="text-sm sm:text-xl lg:text-2xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-red-400 group-hover:to-purple-400 transition-all duration-500 leading-tight">
+        <h1 className="text-sm sm:text-xl lg:text-2xl font-bold text-white group-hover:text-red-300 transition-all duration-500 leading-tight">
           {title}
         </h1>
         <p className="text-xs sm:text-sm lg:text-base font-medium text-gray-400 group-hover:text-gray-200 transition-colors duration-500 leading-tight sm:leading-relaxed">
@@ -54,8 +53,7 @@ const HomeCard = ({ className, img, title, description, handleClick }: HomeCardP
       <div className="absolute top-3 sm:top-6 right-3 sm:right-6 w-2 sm:w-3 h-2 sm:h-3 bg-gradient-to-r from-red-500 to-purple-500 rounded-full opacity-40 group-hover:opacity-100 group-hover:scale-150 transition-all duration-500" />
       <div className="absolute bottom-3 sm:bottom-6 right-3 sm:right-6 w-1.5 sm:w-2 h-1.5 sm:h-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-30 group-hover:opacity-80 group-hover:animate-bounce transition-all duration-500 delay-100" />
 
-      {/* Glow effect */}
-      <div className="absolute inset-0 bg-gradient-to-r from-red-500/0 via-red-500/5 to-purple-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-3xl" />
+
     </section>
   );
 };
