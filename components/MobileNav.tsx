@@ -26,13 +26,17 @@ const MobileNav = () => {
           </div>
         </SheetTrigger>
         <SheetContent side="left" hideCloseButton={true} className="border-none bg-gradient-to-b from-gray-900/95 via-gray-900/95 to-gray-900/95 backdrop-blur-xl border-r border-red-500/30 shadow-2xl shadow-red-500/10">
-          {/* Custom close button to replace default X */}
+          {/* Custom hamburger close button */}
           <div className="absolute right-4 top-4 z-10">
             <SheetClose asChild>
-              <button className="flex items-center justify-center size-8 rounded-lg bg-gradient-to-br from-red-500/20 to-purple-500/20 hover:from-red-500/30 hover:to-purple-500/30 border border-red-500/30 hover:border-red-500/50 transition-all duration-300">
-                <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
+              <button className="flex items-center justify-center size-10 rounded-xl bg-gradient-to-br from-red-500/20 to-purple-500/20 hover:from-red-500/30 hover:to-purple-500/30 border border-red-500/30 hover:border-red-500/50 transition-all duration-300">
+                <Image
+                  src="/icons/hamburger.svg"
+                  width={24}
+                  height={24}
+                  alt="hamburger icon"
+                  className="brightness-0 invert"
+                />
               </button>
             </SheetClose>
           </div>
