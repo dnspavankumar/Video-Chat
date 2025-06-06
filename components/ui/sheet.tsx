@@ -73,6 +73,14 @@ const SheetContent = React.forwardRef<
           <span className="sr-only">Close</span>
         </SheetPrimitive.Close>
       )}
+      {/* Force hide any close buttons when hideCloseButton is true */}
+      {hideCloseButton && (
+        <style jsx>{`
+          [data-radix-dialog-close] {
+            display: none !important;
+          }
+        `}</style>
+      )}
     </SheetPrimitive.Content>
   </SheetPortal>
 ));
