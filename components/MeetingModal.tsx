@@ -4,7 +4,6 @@ import { Dialog, DialogContent } from "./ui/dialog";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
 import Image from "next/image";
-import { X } from "lucide-react";
 
 interface MeetingModalProps {
   isOpen: boolean;
@@ -44,12 +43,18 @@ const MeetingModal = ({
           backdropFilter: 'blur(16px)',
         }}
       >
-        {/* Custom Close Button */}
+        {/* Custom Close Button with Hamburger Icon */}
         <button
           onClick={onClose}
-          className="absolute right-4 top-4 rounded-full p-2 text-gray-400 hover:text-white hover:bg-red-500/20 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-red-500/50"
+          className="absolute right-4 top-4 rounded-xl p-2 bg-gradient-to-br from-red-500/20 to-purple-500/20 hover:from-red-500/30 hover:to-purple-500/30 border border-red-500/30 hover:border-red-500/50 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-red-500/50"
         >
-          <X className="size-5" />
+          <Image
+            src="/icons/hamburger.svg"
+            width={20}
+            height={20}
+            alt="hamburger icon"
+            className="brightness-0 invert"
+          />
           <span className="sr-only">Close</span>
         </button>
 
