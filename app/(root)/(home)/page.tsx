@@ -7,17 +7,7 @@ const Home = () => {
   const date = (new Intl.DateTimeFormat('en-US', { dateStyle: 'full' })).format(now);
 
   return (
-    <div className="space-y-4 sm:space-y-8 lg:space-y-12 text-white">
-      {/* Welcome Header */}
-      <div className="text-center space-y-3 sm:space-y-4 px-4">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black bg-gradient-to-r from-red-400 via-purple-400 to-pink-400 bg-clip-text text-transparent leading-tight">
-          Welcome Back
-        </h1>
-        <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-2xl mx-auto px-2">
-          Ready to connect? Start or join a meeting, schedule for later, or view your recordings.
-        </p>
-      </div>
-
+    <div className="space-y-4 sm:space-y-6 lg:space-y-8 text-white">
       {/* Hero Section with Enhanced Design */}
       <div className="relative h-[180px] sm:h-[350px] md:h-[400px] lg:h-[450px] w-full rounded-xl sm:rounded-2xl lg:rounded-[2rem] overflow-hidden bg-gradient-to-br from-red-900/80 via-purple-900/80 to-pink-900/80 border border-red-500/30 shadow-2xl shadow-red-500/20 mx-2 sm:mx-0">
         {/* Animated Background Pattern */}
@@ -53,7 +43,7 @@ const Home = () => {
       </div>
 
       {/* Meeting Actions Section with Better Layout */}
-      <div className="space-y-4 sm:space-y-8 px-2 sm:px-0">
+      <div className="space-y-3 sm:space-y-6 px-2 sm:px-0">
         {/* Section Header */}
         <div className="text-center space-y-2 sm:space-y-4 px-4">
           <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white via-red-200 to-purple-200 bg-clip-text text-transparent">
