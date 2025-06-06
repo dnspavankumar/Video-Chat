@@ -11,14 +11,13 @@ const Sidebar = () => {
   const pathname = usePathname();
   const { isCollapsed } = useSidebar();
 
+  // Don't render sidebar when collapsed
+  if (isCollapsed) {
+    return null;
+  }
+
   return (
-    <section className={cn(
-      "fixed left-0 top-0 flex h-screen flex-col justify-start bg-gradient-to-b from-gray-900/95 via-gray-900/95 to-gray-900/95 backdrop-blur-xl border-r border-red-500/30 p-6 pt-28 text-white max-sm:hidden z-45 shadow-2xl shadow-red-500/10 transition-all duration-300 ease-in-out",
-      {
-        "w-[280px]": !isCollapsed,
-        "w-[80px]": isCollapsed,
-      }
-    )}>
+    <section className="fixed left-0 top-0 flex h-screen w-[280px] flex-col justify-start bg-gradient-to-b from-gray-900/95 via-gray-900/95 to-gray-900/95 backdrop-blur-xl border-r border-red-500/30 p-6 pt-28 text-white max-sm:hidden z-45 shadow-2xl shadow-red-500/10 transition-all duration-300 ease-in-out">
       {/* Gradient Border Effect */}
       <div className="absolute inset-y-0 right-0 w-[2px] bg-gradient-to-b from-transparent via-red-500/60 to-transparent" />
 
@@ -27,11 +26,9 @@ const Sidebar = () => {
 
       {/* Navigation Section */}
       <div className="flex flex-1 flex-col gap-3">
-        {!isCollapsed && (
-          <h2 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
-            Navigation
-          </h2>
-        )}
+        <h2 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
+          Navigation
+        </h2>
         {sidebarLinks.map((item) => {
           const isActive = pathname === item.route || pathname.startsWith(`${item.route}/`);
 
@@ -75,22 +72,20 @@ const Sidebar = () => {
               </div>
 
               {/* Text */}
-              {!isCollapsed && (
-                <div className="flex flex-col">
-                  <p className={cn(
-                    'text-base font-semibold transition-all duration-500',
-                    {
-                      'text-white font-bold': isActive,
-                      'text-gray-300 group-hover:text-white': !isActive,
-                    }
-                  )}>
-                    {item.label}
-                  </p>
-                  {isActive && (
-                    <div className="w-8 h-0.5 bg-gradient-to-r from-red-400 to-purple-400 rounded-full mt-1" />
-                  )}
-                </div>
-              )}
+              <div className="flex flex-col">
+                <p className={cn(
+                  'text-base font-semibold transition-all duration-500',
+                  {
+                    'text-white font-bold': isActive,
+                    'text-gray-300 group-hover:text-white': !isActive,
+                  }
+                )}>
+                  {item.label}
+                </p>
+                {isActive && (
+                  <div className="w-8 h-0.5 bg-gradient-to-r from-red-400 to-purple-400 rounded-full mt-1" />
+                )}
+              </div>
 
               {/* Hover glow effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-red-500/0 via-red-500/8 to-purple-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
@@ -109,19 +104,12 @@ const Sidebar = () => {
 
       {/* Footer Section */}
       <div className="mt-8 pt-6 border-t border-gray-700/50">
-        <div className={cn(
-          "flex items-center gap-3 p-3 rounded-xl bg-gradient-to-r from-gray-800/50 to-gray-700/50 border border-gray-600/30",
-          {
-            "justify-center": isCollapsed,
-          }
-        )}>
+        <div className="flex items-center gap-3 p-3 rounded-xl bg-gradient-to-r from-gray-800/50 to-gray-700/50 border border-gray-600/30">
           <div className="size-2 bg-green-400 rounded-full animate-pulse" />
-          {!isCollapsed && (
-            <div className="flex flex-col">
-              <p className="text-xs font-medium text-white">System Status</p>
-              <p className="text-xs text-green-400">All systems operational</p>
-            </div>
-          )}
+          <div className="flex flex-col">
+            <p className="text-xs font-medium text-white">System Status</p>
+            <p className="text-xs text-green-400">All systems operational</p>
+          </div>
         </div>
       </div>
     </section>

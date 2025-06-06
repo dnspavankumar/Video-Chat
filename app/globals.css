@@ -378,6 +378,63 @@ button[aria-label*="Close"] svg {
   display: none !important;
 }
 
+/* Hide any Stream Video SDK close buttons */
+.str-video__close-button,
+.str-video__close,
+[class*="close-button"],
+[class*="close_button"] {
+  display: none !important;
+}
+
+/* Hide any X marks in fixed positioned elements */
+.fixed [data-lucide="x"],
+.fixed .lucide-x,
+.absolute [data-lucide="x"],
+.absolute .lucide-x {
+  display: none !important;
+}
+
+/* Hide any SVG that might contain X paths */
+svg[viewBox*="24"] path[d*="M18 6L6 18"],
+svg[viewBox*="24"] path[d*="m6 6 12 12"],
+svg[viewBox*="24"] path[d*="M6 18L18 6"] {
+  display: none !important;
+}
+
+/* Replace any remaining X marks with hamburger icons */
+button[aria-label*="close"]:not(.hamburger-replaced)::before,
+button[aria-label*="Close"]:not(.hamburger-replaced)::before {
+  content: "☰" !important;
+  font-size: 16px !important;
+  color: white !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  z-index: 999 !important;
+}
+
+/* Hide the original content of close buttons */
+button[aria-label*="close"]:not(.hamburger-replaced) > *,
+button[aria-label*="Close"]:not(.hamburger-replaced) > * {
+  display: none !important;
+}
+
+/* Target specific X marks only - much more conservative approach */
+svg[data-lucide="x"] {
+  display: none !important;
+}
+
+.lucide-x {
+  display: none !important;
+}
+
+/* Only hide specific close button SVGs, not the buttons themselves */
+button[aria-label*="close"] svg[data-lucide="x"],
+button[aria-label*="Close"] svg[data-lucide="x"] {
+  display: none !important;
+}
+
 /* ==== clerk class override ===== */
 
 .cl-userButtonPopoverActionButtonIcon {
